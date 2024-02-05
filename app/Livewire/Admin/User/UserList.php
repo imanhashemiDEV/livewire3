@@ -5,7 +5,6 @@ namespace App\Livewire\Admin\User;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Attributes\Layout;
-use Livewire\Attributes\Rule;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Livewire\WithPagination;
@@ -15,14 +14,13 @@ class UserList extends Component
     use WithPagination,WithFileUploads;
     protected $paginationTheme = "bootstrap";
 
-    public $image;
+    public  $image;
     public $search;
     public $editUserIndex=null;
 
     public function editRow($user_id)
     {
         $this->editUserIndex=$user_id;
-
         $user = User::query()->find($user_id);
         $this->name = $user->name;
         $this->email = $user->email;
@@ -39,7 +37,7 @@ class UserList extends Component
 
         $user = User::query()->find($user_id);
 
-        if($this->image != null){
+        if($this->image !== null){
             $name = time() .'.'.$this->image->getClientOriginalExtension();
             $this->image->storeAs('photos',$name,'public');
         }else{
@@ -60,8 +58,6 @@ class UserList extends Component
         session()->flash('message','کاربر ویرایش شد');
 
     }
-
-
 
     #[Layout('admin.master')]
     public function render()

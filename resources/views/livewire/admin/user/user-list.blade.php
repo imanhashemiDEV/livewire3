@@ -8,7 +8,10 @@
                         <input type="text" class="form-control text-left" dir="rtl" wire:model.live="search">
                     </div>
                 </div>
+
+                 {{--  Create User Component --}}
                 <livewire:admin.user.user-create :image="$image" :editUserIndex="$editUserIndex"/>
+
                 <table class="table table-striped table-hover">
                     <thead class="thead-light">
                     <tr>

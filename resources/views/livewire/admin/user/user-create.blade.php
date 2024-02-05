@@ -1,4 +1,9 @@
 <div class="my-5">
+    @if(session()->has('message'))
+        <div class="alert alert-info">
+               {{session('message')}}
+        </div>
+    @endif
     <h5 class="mb-3">ایجاد کاربر</h5>
     <form>
         <div class="row">
@@ -17,7 +22,7 @@
                 <div class="form-group row">
                     <label class="col-sm-3 col-form-label">ایمیل</label>
                     <div class="col-sm-9">
-                        <input type="text" wire:model.blur="email" class="form-control text-left" dir="rtl">
+                        <input type="text" wire:model="email" class="form-control text-left" dir="rtl" value="{{$name}}">
                         @error('email')
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
