@@ -35,7 +35,7 @@ class UserCreate extends Component
             $name=null;
         }
 
-        $user = User::query()->create([
+        User::query()->create([
             'name'=>$this->name,
             'email'=>$this->email,
             'mobile'=>$this->mobile,
