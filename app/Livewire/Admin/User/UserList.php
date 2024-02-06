@@ -5,6 +5,7 @@ namespace App\Livewire\Admin\User;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Livewire\WithPagination;
@@ -59,10 +60,16 @@ class UserList extends Component
 
     }
 
+    #[On('user-created')]
+//    public function userUpdated()
+//    {
+//
+//    }
+
     #[Layout('admin.master')]
     public function render()
     {
-        sleep(3);
+//        sleep(3);
         $users = User::query()
             ->where('name','like','%'.$this->search.'%')
             ->orWhere('email','like','%'.$this->search.'%')

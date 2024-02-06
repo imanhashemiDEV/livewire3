@@ -45,6 +45,7 @@ class UserCreate extends Component
 
         $this->reset('name', 'email','mobile','image','password');
         session()->flash('message','کاربر جدید ذخیره شد');
+        $this->dispatch('user-created');
     }
 
 
