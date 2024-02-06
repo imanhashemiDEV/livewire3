@@ -4,6 +4,7 @@ namespace App\Livewire\Admin\User;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -48,6 +49,47 @@ class UserCreate extends Component
         $this->dispatch('user-created');
     }
 
+    #[On('editRow')]
+    public function editRow($user_id)
+    {
+        $user = User::query()->find($user_id);
+        $this->name = $user->name;
+        $this->email = $user->email;
+        $this->mobile = $user->mobile;
+        $this->editUserIndex=$user_id;
+    }
+
+    #[On('updateRow')]
+    public function updateRow($user_id)
+    {
+        $this->validate([
+            'name'=>'required',
+            'email'=>'required|unique:users,email,'.$user_id,
+            'mobile'=>'required|unique:users,mobile,'.$user_id,
+        ]);
+
+        $user = User::query()->find($user_id);
+
+        if($this->image !== null){
+            $name = time() .'.'.$this->image->getClientOriginalExtension();
+            $this->image->storeAs('photos/users',$name,'public');
+        }else{
+            $name=$user->image;
+        }
+
+
+        $user->update([
+            'name'=>$this->name,
+            'email'=>$this->email,
+            'mobile'=>$this->mobile,
+            'password'=> $this->password ? Hash::make($this->password) : $user->password  ,
+            'image'=>$name,
+        ]);
+
+        $this->reset('name', 'email','mobile','image','password');
+        session()->flash('message','کاربر ویرایش شد');
+        $this->dispatch('user-updated');
+    }
 
     public function render()
     {
