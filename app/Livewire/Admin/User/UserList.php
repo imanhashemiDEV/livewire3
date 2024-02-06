@@ -22,49 +22,25 @@ class UserList extends Component
     public function editRow($user_id)
     {
         $this->editUserIndex=$user_id;
-        $user = User::query()->find($user_id);
-        $this->name = $user->name;
-        $this->email = $user->email;
-        $this->mobile = $user->mobile;
+        $this->dispatch('editRow',$user_id);
     }
 
     public function updateRow($user_id)
     {
-        $this->validate([
-            'name'=>'required',
-            'email'=>'required|unique:users,email,'.$user_id,
-            'mobile'=>'required|unique:users,mobile,'.$user_id,
-        ]);
-
-        $user = User::query()->find($user_id);
-
-        if($this->image !== null){
-            $name = time() .'.'.$this->image->getClientOriginalExtension();
-            $this->image->storeAs('photos',$name,'public');
-        }else{
-            $name=$user->image;
-        }
-
-
-        $user->update([
-            'name'=>$this->name,
-            'email'=>$this->email,
-            'mobile'=>$this->mobile,
-            'password'=> $this->password ? Hash::make($this->password) : $user->password  ,
-            'image'=>$name,
-        ]);
-
-        $this->editUserIndex=null;
-
-        session()->flash('message','کاربر ویرایش شد');
-
+        $this->dispatch('updateRow', $user_id);
     }
 
     #[On('user-created')]
-//    public function userUpdated()
+//    public function userCreated()
 //    {
 //
 //    }
+
+    #[On('user-updated')]
+    public function userUpdated()
+    {
+        $this->editUserIndex=null;
+    }
 
     #[Layout('admin.master')]
     public function render()
