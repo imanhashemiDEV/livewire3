@@ -18,6 +18,7 @@ class UserList extends Component
     public  $image;
     public $search;
     public $editUserIndex=null;
+    public $sortId=true;
 
     public function editRow($user_id)
     {
@@ -46,7 +47,7 @@ class UserList extends Component
     public function render()
     {
 //        sleep(3);
-        $users = User::query()
+        $users = User::query()->orderBy('id', $this->sortId ? "ASC" : "DESC")
             ->where('name','like','%'.$this->search.'%')
             ->orWhere('email','like','%'.$this->search.'%')
             ->orWhere('mobile','like','%'.$this->search.'%')
