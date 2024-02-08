@@ -4,6 +4,7 @@ namespace App\Livewire\Admin\User;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Livewire\Attributes\Js;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\On;
 use Livewire\Component;
@@ -31,6 +32,16 @@ class UserList extends Component
         $this->dispatch('updateRow', $user_id);
     }
 
+    #[Js]
+    public function resetSearch()
+    {
+        return <<<'JS'
+
+         $wire.search='';
+
+        JS;
+    }
+
     #[On('user-created')]
 //    public function userCreated()
 //    {
@@ -47,6 +58,7 @@ class UserList extends Component
     public function render()
     {
 //        sleep(3);
+        //$this->js("alert('page reloaded')");
         $users = User::query()->orderBy('id', $this->sortId ? "ASC" : "DESC")
             ->where('name','like','%'.$this->search.'%')
             ->orWhere('email','like','%'.$this->search.'%')
