@@ -13,24 +13,8 @@ use Livewire\WithPagination;
 
 class UserList extends Component
 {
-    use WithPagination,WithFileUploads;
-    protected $paginationTheme = "bootstrap";
 
-    public  $image;
     public $search;
-    public $editUserIndex=null;
-    public $sortId=true;
-
-    public function editRow($user_id)
-    {
-        $this->editUserIndex=$user_id;
-        $this->dispatch('editRow',$user_id);
-    }
-
-    public function updateRow($user_id)
-    {
-        $this->dispatch('updateRow', $user_id);
-    }
 
     #[Js]
     public function resetSearch()
@@ -42,28 +26,12 @@ class UserList extends Component
         JS;
     }
 
-    #[On('user-created')]
-//    public function userCreated()
-//    {
-//
-//    }
-
-    #[On('user-updated')]
-    public function userUpdated()
-    {
-        $this->editUserIndex=null;
-    }
-
     #[Layout('admin.master')]
     public function render()
     {
 //        sleep(3);
         //$this->js("alert('page reloaded')");
-        $users = User::query()->orderBy('id', $this->sortId ? "ASC" : "DESC")
-            ->where('name','like','%'.$this->search.'%')
-            ->orWhere('email','like','%'.$this->search.'%')
-            ->orWhere('mobile','like','%'.$this->search.'%')
-            ->paginate(5);
-        return view('livewire.admin.user.user-list',compact('users'));
+
+        return view('livewire.admin.user.user-list');
     }
 }
