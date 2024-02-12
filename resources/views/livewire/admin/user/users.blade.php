@@ -1,4 +1,4 @@
-<div>
+<div wire:poll="pollRefresh">
     <table class="table table-striped table-hover">
         <thead class="thead-light">
         <tr>
