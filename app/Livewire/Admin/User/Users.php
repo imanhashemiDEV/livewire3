@@ -29,7 +29,15 @@ class Users extends Component
         $this->dispatch('updateRow', $user_id);
     }
 
+    #[Js]
+    public function pollRefresh()
+    {
+        return <<<'JS'
 
+         console.log('poll')
+
+        JS;
+    }
 
     #[On('user-created')]
 //    public function userCreated()
