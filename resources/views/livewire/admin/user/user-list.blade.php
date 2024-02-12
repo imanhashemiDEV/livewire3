@@ -28,7 +28,7 @@
                 <livewire:admin.user.user-create/>
 
                 {{--  Users List Component --}}
-                <livewire:admin.user.users/>
+                <livewire:admin.user.users lazy/>
             </div>
 
         </div>

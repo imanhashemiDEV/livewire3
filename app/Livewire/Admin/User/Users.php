@@ -51,8 +51,14 @@ class Users extends Component
         $this->editUserIndex=null;
     }
 
+    public function placeholder()
+    {
+        return view('livewire.admin.lazy');
+    }
+
     public function render()
     {
+        sleep(3);
         $users = User::query()->orderBy('id', $this->sortId ? "ASC" : "DESC")
             ->where('name','like','%'.$this->search.'%')
             ->orWhere('email','like','%'.$this->search.'%')
