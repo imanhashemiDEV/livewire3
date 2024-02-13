@@ -25,9 +25,9 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($users as $index=>$user)
+        @foreach($this->users as $index=>$user)
             <tr>
-                <td class="text-center align-middle">{{$users->firstItem()+$index}}</td>
+                <td class="text-center align-middle">{{$this->users->firstItem()+$index}}</td>
                 <td class="text-center align-middle">{{$user->id}}</td>
                 <td class="text-center align-middle">
                     <figure class="avatar avatar">
@@ -58,6 +58,6 @@
     </table>
     <div style="margin: 40px !important;"
          class="pagination pagination-rounded pagination-sm d-flex justify-content-center">
-        {{$users->links()}}
+        {{$this->users->links()}}
     </div>
 </div>
