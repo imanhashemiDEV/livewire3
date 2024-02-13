@@ -3,6 +3,7 @@
 namespace App\Livewire\Admin\User;
 
 use App\Models\User;
+use Livewire\Attributes\Computed;
 use Livewire\Attributes\Js;
 use Livewire\Attributes\On;
 use Livewire\Component;
@@ -16,8 +17,18 @@ class Users extends Component
     public $sortId=true;
     public $editUserIndex=null;
     public $search="";
+//    public $users;
+    public $user_id=1;
     protected $paginationTheme = "bootstrap";
 
+//    public function mount()
+//    {
+//        $this->users = User::query()->orderBy('id', $this->sortId ? "ASC" : "DESC")
+//            ->where('name','like','%'.$this->search.'%')
+//            ->orWhere('email','like','%'.$this->search.'%')
+//            ->orWhere('mobile','like','%'.$this->search.'%')
+//            ->paginate(5);
+//    }
     public function editRow($user_id)
     {
         $this->editUserIndex=$user_id;
@@ -40,10 +51,10 @@ class Users extends Component
     }
 
     #[On('user-created')]
-//    public function userCreated()
-//    {
-//
-//    }
+    public function userCreated()
+    {
+        unset($this->users);
+    }
 
     #[On('user-updated')]
     public function userUpdated()
@@ -56,14 +67,31 @@ class Users extends Component
         return view('livewire.admin.lazy');
     }
 
-    public function render()
+    #[Computed(persist: true,seconds: 3600)]
+    public function user()
     {
-        sleep(3);
-        $users = User::query()->orderBy('id', $this->sortId ? "ASC" : "DESC")
+        User::query()->find($this->user_id);
+    }
+
+    #[Computed()]
+    public function users()
+    {
+        return User::query()->orderBy('id', $this->sortId ? "ASC" : "DESC")
             ->where('name','like','%'.$this->search.'%')
             ->orWhere('email','like','%'.$this->search.'%')
             ->orWhere('mobile','like','%'.$this->search.'%')
             ->paginate(5);
-        return view('livewire.admin.user.users',compact('users'));
+    }
+
+//    public function foo()
+//    {
+//        $users = $this->users;
+//    }
+
+    public function render()
+    {
+       // sleep(3);
+//        $users =
+        return view('livewire.admin.user.users');
     }
 }
