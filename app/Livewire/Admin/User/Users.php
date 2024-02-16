@@ -29,6 +29,28 @@ class Users extends Component
 //            ->orWhere('mobile','like','%'.$this->search.'%')
 //            ->paginate(5);
 //    }
+
+    //  livewire Hooks
+//    public function mount()
+//    {
+//        dump('mount');
+//    }
+
+//    public function boot()
+//    {
+//        dump('boot');
+//    }
+
+//    public function hydrate()
+//    {
+//        dump('hydrate');
+//    }
+
+//    public function dehydrate()
+//    {
+//        dump('dehydrate');
+//    }
+
     public function editRow($user_id)
     {
         $this->editUserIndex=$user_id;
