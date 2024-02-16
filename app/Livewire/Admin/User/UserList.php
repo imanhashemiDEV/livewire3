@@ -16,6 +16,13 @@ class UserList extends Component
 
     public $search;
 
+    public function updated($property)
+    {
+        if ($property === 'search') {
+            $this->dispatch('textSearched', $this->search);
+        }
+    }
+
     #[Js]
     public function resetSearch()
     {
