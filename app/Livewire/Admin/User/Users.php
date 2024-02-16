@@ -109,6 +109,11 @@ class Users extends Component
 //    {
 //        $users = $this->users;
 //    }
+    #[On('textSearched')]
+    public function textSearched($search)
+    {
+       $this->search = $search;
+    }
 
     public function render()
     {
