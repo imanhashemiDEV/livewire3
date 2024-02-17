@@ -77,7 +77,6 @@ class UserCreate extends Component
             $name=$user->image;
         }
 
-
         $user->update([
             'name'=>$this->name,
             'email'=>$this->email,
