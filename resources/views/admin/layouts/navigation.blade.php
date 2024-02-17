@@ -14,7 +14,7 @@
                 </a>
             </li>
             <li data-toggle="tooltip" title="خروج">
-                <a href="login.html" class="go-to-page">
+                <a href="{{route('logout')}}" class="go-to-page">
                     <i class="icon ti-power-off"></i>
                 </a>
             </li>
@@ -26,6 +26,12 @@
                 <a href="#">کاربران</a>
                 <ul>
                     <li><a href="{{route('users')}}">لیست کاربران</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">دسته بندی ها</a>
+                <ul>
+                    <li><a href="{{route('categories')}}">لیست دسته بندی ها</a></li>
                 </ul>
             </li>
         </ul>
