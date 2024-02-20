@@ -18,8 +18,6 @@ class Categories extends Component
     public $selected_category;
     public $category_title;
 
-    public $selectedCategoryIndex=null;
-
     public function createCategory()
     {
         $this->validate();
@@ -42,20 +40,6 @@ class Categories extends Component
            'title'=> $this->category_title
        ]);
         $this->dispatch('closeCategoryModal');
-    }
-
-    public function editRow($category_id)
-    {
-        $this->selectedCategoryIndex=$category_id;
-        $this->title = Category::query()->find($category_id)->title;
-    }
-
-    public function updateRow($category_id)
-    {
-        Category::query()->find($category_id)->update([
-            'title'=>$this->title
-        ]);
-        $this->selectedCategoryIndex=null;
     }
 
     #[Layout('admin.master')]
