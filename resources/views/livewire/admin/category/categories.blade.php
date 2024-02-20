@@ -46,6 +46,7 @@
                             <th class="text-center align-middle text-primary">ردیف</th>
                             <th class="text-center align-middle text-primary"> عنوان</th>
                             <th class="text-center align-middle text-primary">ویرایش</th>
+                            <th class="text-center align-middle text-primary">ویرایش خطی</th>
                             <th class="text-center align-middle text-primary">حذف</th>
                             <th class="text-center align-middle text-primary">تاریخ ایجاد</th>
                         </tr>
@@ -54,11 +55,34 @@
                         @foreach($categories as $index=>$category)
                             <tr>
                                 <td class="text-center align-middle">{{$categories->firstItem()+$index}}</td>
-                                <td class="text-center align-middle">{{$category->title}}</td>
                                 <td class="text-center align-middle">
-                                        <a class="btn btn-outline-info" href="#" data-toggle="modal" data-target="#modal-category-edit">
+                                    @if($selectedCategoryIndex===$category->id)
+                                        <input type="text" wire:model="title" class="form-control text-left" dir="rtl">
+                                        @error('title')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    @else
+                                        {{$category->title}}
+                                    @endif
+
+                                </td>
+                                <td class="text-center align-middle">
+                                        <a class="btn btn-outline-info" href="#" data-toggle="modal" data-target="#modal-category-edit" wire:click="editCategory({{$category->id}})">
                                             ویرایش
                                         </a>
+                                </td>
+                                <td class="text-center align-middle">
+                                    @if($selectedCategoryIndex==$category->id)
+                                        <a class="btn btn-outline-info" href="#" wire:click="updateRow({{$category->id}})">
+                                            ذخیره خطی
+                                        </a>
+                                    @else
+                                        <a class="btn btn-outline-info" href="#" wire:click="editRow({{$category->id}})">
+                                            ویرایش خطی
+                                        </a>
+                                    @endif
+
+
                                 </td>
                                 <td class="text-center align-middle">
                                         <a class="btn btn-outline-danger">
@@ -81,7 +105,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-category-edit" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="modal-category-edit" tabindex="-1" role="dialog" aria-hidden="true" wire:ignore.self>
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -91,11 +115,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <input type="text" wire:model="category_title"  class="form-control text-left" dir="rtl">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
-                    <button type="button" class="btn btn-primary">ذخیره تغییرات</button>
+                    <button type="button" class="btn btn-primary" wire:click="updateCategory">ذخیره تغییرات</button>
                 </div>
             </div>
         </div>
@@ -103,4 +127,13 @@
 
 </main>
 
+@push('scripts')
+    <script>
+        document.addEventListener('livewire:init', () => {
+            Livewire.on('closeCategoryModal', (event) => {
+                $('#modal-category-edit').modal('toggle')
+            });
+        });
+    </script>
+@endpush
 
