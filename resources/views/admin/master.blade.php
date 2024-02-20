@@ -33,6 +33,7 @@
 <script src="{{url('panel/plugins/colorpicker/js/colorpicker.js')}}"></script>
 <script src="{{url('panel/plugins/ckeditor/ckeditor.js')}}"></script>
 <script src="{{url('panel/plugins/dropzone/js/dropzone.js')}}"></script>
+@stack('scripts')
 @livewireScripts
 </body>
 </html>
