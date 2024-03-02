@@ -32,7 +32,7 @@
                                 <td class="text-center align-middle">{{$article->title}}</td>
                                 <td class="text-center align-middle">{{$article->category->title}}</td>
                                 <td class="text-center align-middle">
-                                    <a class="btn btn-outline-info" href="#">
+                                    <a class="btn btn-outline-info" href="{{route('edit.article',$article->id)}}">
                                         ویرایش
                                     </a>
                                 </td>
