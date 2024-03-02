@@ -34,6 +34,13 @@
                     <li><a href="{{route('categories')}}">لیست دسته بندی ها</a></li>
                 </ul>
             </li>
+            <li>
+                <a href="#">مقاله ها</a>
+                <ul>
+                    <li><a href="{{route('create.article')}}">ایجاد مقاله</a></li>
+                    <li><a href="{{route('articles')}}">لیست مقاله ها</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
