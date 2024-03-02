@@ -4,11 +4,16 @@ namespace App\Livewire\Admin\Article;
 
 use App\Models\Article;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Url;
 use Livewire\Component;
 
 class Articles extends Component
 {
-    public $search;
+
+//    #[Url(as: 'q')]
+//    #[Url(keep: true)]
+    #[Url(history: true)]
+    public $search="";
 
     #[Layout('admin.master')]
     public function render()
