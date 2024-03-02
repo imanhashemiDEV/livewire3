@@ -57,7 +57,9 @@
 </main>
 
 @push('scripts')
+    <script>
 
+    </script>
 @endpush
 
 
