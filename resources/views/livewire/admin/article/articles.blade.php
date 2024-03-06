@@ -37,8 +37,11 @@
                                     </a>
                                 </td>
                                 <td class="text-center align-middle">
-                                    <a class="btn btn-outline-danger">
-                                        حذف
+                                    <a class="btn btn-outline-danger" wire:click="deleteArticle({{$article->id}})">
+                                        حذف1
+                                    </a>
+                                    <a class="btn btn-outline-danger" wire:click="$dispatch('article-delete', { article_id: {{$article->id}} })">
+                                        حذف2
                                     </a>
                                 </td>
                                 <td class="text-center align-middle">{{$article->created_at}}</td>
@@ -58,6 +61,33 @@
 
 @push('scripts')
     <script>
+
+        document.addEventListener('livewire:init', () => {
+            Livewire.on('article-delete', (event) => {
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, delete it!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Livewire.dispatch('article-destroy',{article_id:event.article_id})
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your file has been deleted.",
+                            icon: "success"
+                        });
+                    }
+                });
+
+            });
+
+
+        });
+
 
     </script>
 @endpush
