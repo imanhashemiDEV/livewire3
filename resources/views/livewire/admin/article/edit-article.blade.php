@@ -11,6 +11,8 @@
                         @endif
                         <div class="container">
                             <h6 class="card-title">ویرایش مقاله</h6>
+                            <h6 class="card-title">آیدی مقاله {{$id}}  </h6>
+                            <input type="text" wire:model.live="id">
                             <div class="col-8 offset-4 mb-4">
                                 <img src="{{url('photos/articles',$article->image)}}" alt="">
                             </div>

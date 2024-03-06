@@ -5,6 +5,7 @@ namespace App\Livewire\Admin\Article;
 use App\Models\Article;
 use App\Models\Category;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Locked;
 use Livewire\Attributes\On;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
@@ -21,15 +22,29 @@ class EditArticle extends Component
     #[Rule('required')]
     public $body;
     public $image;
+   // public Article $article;
     public $article;
 
-    public function mount(Article $article)
+    #[Locked]
+    public $id;
+    public function mount($id)
     {
-      $this->article = $article;
-      $this->title = $article->title;
-      $this->category_id = $article->category_id;
-      $this->body = $article->body;
+        $this->article = Article::query()->find($id);
+        $this->title = $this->article->title;
+        $this->category_id = $this->article->category_id;
+        $this->body = $this->article->body;
+
+        $this->id = $id;
     }
+
+//    public function mount($article)
+//    {
+//      $this->article = $article;
+//      $this->title = $article->title;
+//      $this->category_id = $article->category_id;
+//      $this->body = $article->body;
+//    }
+
 
     #[On('setBody')]
     public function setBody($body)
