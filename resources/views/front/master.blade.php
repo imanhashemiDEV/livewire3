@@ -2,7 +2,6 @@
 <html lang="fa" dir="rtl">
 <head>
     <title>  دوره آنلاین و آموزش</title>
-
     <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -46,7 +45,11 @@
 <script src="{{url('front/js/functions.js')}}"></script>
 <!-- rtl-theme script-->
 <script src="https://files-de.rtl-theme.com/jsdemos/79df7d11747f944da7628dfc1c76f709661cfe8f.js?pid=257550"></script>
-
+<script data-navigate-once>
+    document.addEventListener('livewire:navigated', () => {
+        console.log('navigated')
+    })
+</script>
 </body>
 
 </html>

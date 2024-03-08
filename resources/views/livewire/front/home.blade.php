@@ -1,4 +1,7 @@
 <main>
+    @persist('test')
+    <input type="text">
+    @endpersist
 {{--    Main Banner START -->--}}
     <section class="position-relative overflow-hidden pt-5 pt-lg-3">
         <!-- SVG START -->
@@ -1705,3 +1708,4 @@
     Reviews END -->
 
 </main>
+
