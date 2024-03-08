@@ -1,5 +1,8 @@
 <main>
-    Main Banner START -->
+    @persist('test')
+    <input type="text">
+    @endpersist
+{{--    Main Banner START -->--}}
     <section class="position-relative overflow-hidden pt-5 pt-lg-3">
         <!-- SVG START -->
         <figure class="position-absolute top-50 start-0 translate-middle-y ms-n7 d-none d-xxl-block">
@@ -208,13 +211,13 @@
                     </figure>
                     <!-- Icon logos START -->
                     <div class="p-2 bg-white shadow rounded-3 position-absolute top-50 start-0 translate-middle-y mt-n7 d-none d-sm-block">
-                        <img src="assets/images/client/science.svg" alt="Icon">
+                        <img src="{{url('front/images/client/science.svg')}}" alt="Icon">
                     </div>
                     <div class="p-2 bg-white shadow rounded-3 position-absolute top-0 end-0 me-5">
-                        <img src="assets/images/client/angular.svg" alt="Icon">
+                        <img src="{{url('front/images/client/angular.svg')}}" alt="Icon">
                     </div>
                     <div 	class="p-2 bg-white shadow rounded-3 position-absolute top-50 end-0 translate-middle-y mt-5 ms-5 d-none d-lg-block z-index-9">
-                        <img src="assets/images/client/figma.svg" alt="Icon">
+                        <img src="{{url('front/images/client/figma.svg')}}" alt="Icon">
                     </div>
                     <!-- Icon logos END -->
 
@@ -232,21 +235,21 @@
                     </div>
 
                     <!-- Active student -->
-                    <div class="p-3 bg-success d-inline-block rounded-4 shadow-lg position-absolute top-50 end-0 translate-middle-y mt-n7 z-index-1 d-none d-md-block" style="background:url(assets/images/pattern/01.png) no-repeat center center; background-size:cover;">
+                    <div class="p-3 bg-success d-inline-block rounded-4 shadow-lg position-absolute top-50 end-0 translate-middle-y mt-n7 z-index-1 d-none d-md-block" style="background:url({{url('front/images/pattern/01.png')}}) no-repeat center center; background-size:cover;">
                         <p class="text-white">دانشجویان جدید امروز ما</p>
                         <!-- Avatar group -->
                         <ul class="avatar-group mb-0">
                             <li class="avatar avatar-sm">
-                                <img class="avatar-img rounded-circle border-white" src="assets/images/avatar/01.jpg" alt="avatar">
+                                <img class="avatar-img rounded-circle border-white" src="{{url('front/images/avatar/01.jpg')}}" alt="avatar">
                             </li>
                             <li class="avatar avatar-sm">
-                                <img class="avatar-img rounded-circle border-white" src="assets/images/avatar/02.jpg" alt="avatar">
+                                <img class="avatar-img rounded-circle border-white" src="{{url('front/images/avatar/02.jpg')}}" alt="avatar">
                             </li>
                             <li class="avatar avatar-sm">
-                                <img class="avatar-img rounded-circle border-white" src="assets/images/avatar/03.jpg" alt="avatar">
+                                <img class="avatar-img rounded-circle border-white" src="{{url('front/images/avatar/03.jpg')}}" alt="avatar">
                             </li>
                             <li class="avatar avatar-sm">
-                                <img class="avatar-img rounded-circle border-white" src="assets/images/avatar/04.jpg" alt="avatar">
+                                <img class="avatar-img rounded-circle border-white" src="{{url('front/images/avatar/04.jpg')}}" alt="avatar">
                             </li>
                             <li class="avatar avatar-sm">
                                 <div class="avatar-img rounded-circle border-white bg-primary">
@@ -257,7 +260,7 @@
                     </div>
                     <!-- Image -->
                     <div class="position-relative">
-                        <img src="assets/images/element/07.png" alt="">
+                        <img src="{{url('front/images/element/07.png')}}" alt="">
                     </div>
                 </div>
                 <!-- Right content END -->
@@ -378,7 +381,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/08.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/08.jpg')}}" class="card-img-top" alt="course image">
                                 <!-- Card body -->
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
@@ -415,7 +418,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/02.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/02.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -451,7 +454,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/03.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/03.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -487,7 +490,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/07.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/07.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -523,7 +526,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/11.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/11.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -559,7 +562,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/12.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/12.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -595,7 +598,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/04.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/04.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -631,7 +634,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/09.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/09.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -673,7 +676,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/05.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/05.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -709,7 +712,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/06.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/06.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -745,7 +748,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/07.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/07.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -781,7 +784,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/09.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/09.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -817,7 +820,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/10.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/10.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -853,7 +856,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/13.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/13.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -895,7 +898,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/08.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/08.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -931,7 +934,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/04.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/04.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -967,7 +970,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/02.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/02.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -1003,7 +1006,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/03.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/03.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -1045,7 +1048,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/01.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/01.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -1081,7 +1084,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/08.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/08.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -1123,7 +1126,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/04.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/04.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -1159,7 +1162,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/09.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/09.jpg')}}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -1267,7 +1270,7 @@
                         <div>
                             <div class="card action-trigger-hover border bg-transparent">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/14.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/14.jpg')}}" class="card-img-top" alt="course image">
                                 <!-- Ribbon -->
                                 <div class="ribbon mt-3"><span>رایگان</span></div>
                                 <!-- Card body -->
@@ -1307,7 +1310,7 @@
                                         <!-- Avatar -->
                                         <div class="d-flex align-items-center">
                                             <div class="avatar avatar-sm">
-                                                <img class="avatar-img rounded-1" src="assets/images/avatar/10.jpg" alt="avatar">
+                                                <img class="avatar-img rounded-1" src="{{url('front/images/avatar/10.jpg')}}" alt="avatar">
                                             </div>
                                             <p class="mb-0 ms-2"><a href="#" class="h6 fw-light mb-0">مهرداد نوروزی</a></p>
                                         </div>
@@ -1326,7 +1329,7 @@
                         <div>
                             <div class="card action-trigger-hover border bg-transparent">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/15.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/15.jpg')}}" class="card-img-top" alt="course image">
                                 <!-- Card body -->
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
@@ -1364,7 +1367,7 @@
                                         <!-- Avatar -->
                                         <div class="d-flex align-items-center">
                                             <div class="avatar avatar-sm">
-                                                <img class="avatar-img rounded-1" src="assets/images/avatar/04.jpg" alt="avatar">
+                                                <img class="avatar-img rounded-1" src="{{url('front/images/avatar/04.jpg')}}" alt="avatar">
                                             </div>
                                             <p class="mb-0 ms-2"><a href="#" class="h6 fw-light mb-0">علی صالحی</a></p>
                                         </div>
@@ -1383,7 +1386,7 @@
                         <div>
                             <div class="card action-trigger-hover border bg-transparent">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/17.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/17.jpg')}}" class="card-img-top" alt="course image">
                                 <!-- Card body -->
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
@@ -1421,7 +1424,7 @@
                                         <!-- Avatar -->
                                         <div class="d-flex align-items-center">
                                             <div class="avatar avatar-sm">
-                                                <img class="avatar-img rounded-1" src="assets/images/avatar/09.jpg" alt="avatar">
+                                                <img class="avatar-img rounded-1" src="{{url('front/images/avatar/09.jpg')}}" alt="avatar">
                                             </div>
                                             <p class="mb-0 ms-2"><a href="#" class="h6 fw-light mb-0">الهام نصرتی</a></p>
                                         </div>
@@ -1440,7 +1443,7 @@
                         <div>
                             <div class="card action-trigger-hover border bg-transparent">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/16.jpg" class="card-img-top" alt="course image">
+                                <img src="{{url('front/images/courses/4by3/16.jpg')}}" class="card-img-top" alt="course image">
                                 <!-- Card body -->
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
@@ -1478,7 +1481,7 @@
                                         <!-- Avatar -->
                                         <div class="d-flex align-items-center">
                                             <div class="avatar avatar-sm">
-                                                <img class="avatar-img rounded-1" src="assets/images/avatar/01.jpg" alt="avatar">
+                                                <img class="avatar-img rounded-1" src="{{url('front/images/avatar/01.jpg')}}" alt="avatar">
                                             </div>
                                             <p class="mb-0 ms-2"><a href="#" class="h6 fw-light mb-0">زهرا حیدری</a></p>
                                         </div>
@@ -1520,7 +1523,7 @@
                             <div class="bg-body shadow text-center p-4 rounded-3 position-relative mb-5 mb-md-0">
                                 <!-- Avatar -->
                                 <div class="avatar avatar-xl mb-3">
-                                    <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
+                                    <img class="avatar-img rounded-circle" src="{{url('front/images/avatar/01.jpg')}}" alt="avatar">
                                 </div>
                                 <!-- Content -->
                                 <blockquote>
@@ -1556,7 +1559,7 @@
                                 <div class="d-flex align-items-center mb-3">
                                     <!-- Avatar -->
                                     <div class="avatar avatar-sm">
-                                        <img class="avatar-img rounded-1" src="assets/images/avatar/09.jpg" alt="avatar">
+                                        <img class="avatar-img rounded-1" src="{{url('front/images/avatar/09.jpg')}}" alt="avatar">
                                     </div>
                                     <!-- Info -->
                                     <div class="ms-2">
@@ -1569,7 +1572,7 @@
                                 <div class="d-flex align-items-center mb-3">
                                     <!-- Avatar -->
                                     <div class="avatar avatar-sm">
-                                        <img class="avatar-img rounded-1" src="assets/images/avatar/04.jpg" alt="avatar">
+                                        <img class="avatar-img rounded-1" src="{{url('front/images/avatar/04.jpg')}}" alt="avatar">
                                     </div>
                                     <!-- Info -->
                                     <div class="ms-2">
@@ -1582,7 +1585,7 @@
                                 <div class="d-flex align-items-center">
                                     <!-- Avatar -->
                                     <div class="avatar avatar-sm">
-                                        <img class="avatar-img rounded-1" src="assets/images/avatar/02.jpg" alt="avatar">
+                                        <img class="avatar-img rounded-1" src="{{url('front/images/avatar/02.jpg')}}" alt="avatar">
                                     </div>
                                     <!-- Info -->
                                     <div class="ms-2">
@@ -1648,7 +1651,7 @@
                                 </svg>
                             </figure>
 
-                            <div class="p-3 bg-primary d-inline-block rounded-4 shadow-lg text-center" style="background:url(assets/images/pattern/02.png) no-repeat center center; background-size:cover;">
+                            <div class="p-3 bg-primary d-inline-block rounded-4 shadow-lg text-center" style="background:url({{url('front/images/pattern/02.png')}}) no-repeat center center; background-size:cover;">
                                 <!-- Info -->
                                 <h5 class="text-white mb-0">4.5/5.0</h5>
                                 <!-- Rating -->
@@ -1668,7 +1671,7 @@
                             <div class="bg-body shadow text-center p-4 rounded-3">
                                 <!-- Avatar -->
                                 <div class="avatar avatar-xl mb-3">
-                                    <img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="avatar">
+                                    <img class="avatar-img rounded-circle" src="{{url('front/images/avatar/03.jpg')}}" alt="avatar">
                                 </div>
                                 <!-- Content -->
                                 <blockquote>
@@ -1705,3 +1708,4 @@
     Reviews END -->
 
 </main>
+

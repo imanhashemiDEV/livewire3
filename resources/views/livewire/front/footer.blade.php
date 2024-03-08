@@ -6,9 +6,9 @@
             <!-- Widget 1 START -->
             <div class="col-lg-3">
                 <!-- logo -->
-                <a class="me-0" href="index.html">
-                    <img class="light-mode-item h-40px" src="assets/images/logo.svg" alt="logo">
-                    <img class="dark-mode-item h-40px" src="assets/images/logo-light.svg" alt="logo">
+                <a class="me-0" href="#">
+                    <img class="light-mode-item h-40px" src="{{url('front/images/logo.svg')}}" alt="logo">
+                    <img class="dark-mode-item h-40px" src="{{url('front/images/logo-light.svg')}}" alt="logo">
                 </a>
                 <p class="my-3">شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
                 <!-- Social media icon -->
@@ -74,11 +74,11 @@
                 <div class="row g-2 mt-2">
                     <!-- Google play store button -->
                     <div class="col-6 col-sm-4 col-md-3 col-lg-6">
-                        <a href="#"> <img src="assets/images/client/google-play.svg" alt=""> </a>
+                        <a href="#"> <img src="{{url('front/images/client/google-play.svg')}}" alt=""> </a>
                     </div>
                     <!-- App store button -->
                     <div class="col-6 col-sm-4 col-md-3 col-lg-6">
-                        <a href="#"> <img src="assets/images/client/app-store.svg" alt="app-store"> </a>
+                        <a href="#"> <img src="{{url('front/images/client/app-store.svg')}}" alt="app-store"> </a>
                     </div>
                 </div> <!-- Row END -->
             </div>
@@ -104,9 +104,9 @@
                                         <i class="fas fa-globe me-2"></i>زبان ها
                                     </a>
                                     <ul class="dropdown-menu min-w-auto" aria-labelledby="languageSwitcher">
-                                        <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/uk.svg" alt="">فارسی</a></li>
-                                        <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/gr.svg" alt="">انگلیسی </a></li>
-                                        <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/sp.svg" alt="">فرانسوی</a></li>
+                                        <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="{{url('front/images/flags/uk.svg')}}" alt="">فارسی</a></li>
+                                        <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="{{url('front/images/flags/gr.svg')}}" alt="">انگلیسی </a></li>
+                                        <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="{{url('front/images/flags/sp.svg')}}" alt="">فرانسوی</a></li>
                                     </ul>
                                 </div>
                             </li>
