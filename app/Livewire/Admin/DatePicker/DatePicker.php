@@ -7,6 +7,12 @@ use Livewire\Component;
 
 class DatePicker extends Component
 {
+    public $date;
+
+    public function getDate()
+    {
+        dd($this->date);
+    }
     #[Layout('admin.master')]
     public function render()
     {

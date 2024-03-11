@@ -41,6 +41,12 @@
                     <li><a href="{{route('articles')}}">لیست مقاله ها</a></li>
                 </ul>
             </li>
+            <li>
+                <a href="#">تاریخ</a>
+                <ul>
+                    <li><a href="{{route('date.picker')}}">انتخاب تاریخ</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
