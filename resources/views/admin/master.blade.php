@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{url('panel/plugins/colorpicker/css/bootstrap-colorpicker.min.css')}}"
           type="text/css">
     <link rel="stylesheet" href="{{url('panel/plugins/dropzone/css/dropzone.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{url('panel/plugins/persian_date_picker/persian-datepicker.min.css')}}"/>
     @livewireStyles
 </head>
 <body class="small-navigation">
@@ -33,6 +34,8 @@
 <script src="{{url('panel/plugins/colorpicker/js/colorpicker.js')}}"></script>
 <script src="{{url('panel/plugins/ckeditor/ckeditor.js')}}"></script>
 <script src="{{url('panel/plugins/dropzone/js/dropzone.js')}}"></script>
+<script src="{{url('panel/plugins/persian_date_picker/persian-date.min.js')}}"></script>
+<script src="{{url('panel/plugins/persian_date_picker/persian-datepicker.min.js')}}"></script>
 @stack('scripts')
 @livewireScripts
 </body>
