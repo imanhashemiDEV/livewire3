@@ -12,3 +12,5 @@ Route::get('/create_article', \App\Livewire\Admin\Article\CreateArticle::class)-
 Route::get('/edit_article/{id}', \App\Livewire\Admin\Article\EditArticle::class)->name('edit.article');
 Route::post('upload_ckeditor_image',[\App\Http\Controllers\Admin\GalleryController::class,'ckeditor_image'])->name('ckeditor.upload');
 Route::get('/alpinejs', \App\Livewire\Admin\Alpinejs\Alpinejs::class)->name('alpinejs');
+Route::get('/x-data/x-text/x-html', \App\Livewire\Admin\Alpinejs\XData::class)->name('x-data');
+
