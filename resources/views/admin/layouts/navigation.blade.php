@@ -52,6 +52,7 @@
                 <ul>
                     <li><a href="{{route('alpinejs')}}">install</a></li>
                     <li><a href="{{route('x-data')}}">x-data/x-text</a></li>
+                    <li><a href="{{route('x-on')}}">x-on</a></li>
                 </ul>
             </li>
         </ul>
