@@ -47,6 +47,12 @@
                     <li><a href="{{route('date.picker')}}">انتخاب تاریخ</a></li>
                 </ul>
             </li>
+            <li>
+                <a href="#">آلپاین جی اس</a>
+                <ul>
+                    <li><a href="{{route('alpinejs')}}">آلپاین جی اس</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
