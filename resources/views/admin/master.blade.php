@@ -36,7 +36,7 @@
 <script src="{{url('panel/plugins/dropzone/js/dropzone.js')}}"></script>
 <script src="{{url('panel/plugins/persian_date_picker/persian-date.min.js')}}"></script>
 <script src="{{url('panel/plugins/persian_date_picker/persian-datepicker.min.js')}}"></script>
-@stack('scripts')
 @livewireScripts
+@stack('scripts')
 </body>
 </html>

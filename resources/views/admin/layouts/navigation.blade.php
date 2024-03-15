@@ -50,7 +50,8 @@
             <li>
                 <a href="#">آلپاین جی اس</a>
                 <ul>
-                    <li><a href="{{route('alpinejs')}}">آلپاین جی اس</a></li>
+                    <li><a href="{{route('alpinejs')}}">install</a></li>
+                    <li><a href="{{route('x-data')}}">x-data/x-text</a></li>
                 </ul>
             </li>
         </ul>
