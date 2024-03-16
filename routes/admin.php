@@ -15,4 +15,5 @@ Route::get('/alpinejs', \App\Livewire\Admin\Alpinejs\Alpinejs::class)->name('alp
 Route::get('/x-data/x-text/x-html', \App\Livewire\Admin\Alpinejs\XData::class)->name('x-data');
 Route::get('/x-on', \App\Livewire\Admin\Alpinejs\XOn::class)->name('x-on');
 Route::get('/x-init', \App\Livewire\Admin\Alpinejs\XInit::class)->name('x-init');
+Route::get('/x-show', \App\Livewire\Admin\Alpinejs\XShow::class)->name('x-show');
 

@@ -54,6 +54,7 @@
                     <li><a href="{{route('x-data')}}">x-data/x-text</a></li>
                     <li><a href="{{route('x-on')}}">x-on</a></li>
                     <li><a href="{{route('x-init')}}">x-init</a></li>
+                    <li><a href="{{route('x-show')}}">x-show</a></li>
                 </ul>
             </li>
         </ul>
