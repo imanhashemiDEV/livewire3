@@ -14,4 +14,5 @@ Route::post('upload_ckeditor_image',[\App\Http\Controllers\Admin\GalleryControll
 Route::get('/alpinejs', \App\Livewire\Admin\Alpinejs\Alpinejs::class)->name('alpinejs');
 Route::get('/x-data/x-text/x-html', \App\Livewire\Admin\Alpinejs\XData::class)->name('x-data');
 Route::get('/x-on', \App\Livewire\Admin\Alpinejs\XOn::class)->name('x-on');
+Route::get('/x-init', \App\Livewire\Admin\Alpinejs\XInit::class)->name('x-init');
 
