@@ -57,6 +57,7 @@
                     <li><a href="{{route('x-show')}}">x-show</a></li>
                     <li><a href="{{route('x-bind')}}">x-bind</a></li>
                     <li><a href="{{route('x-model')}}">x-model</a></li>
+                    <li><a href="{{route('x-modelable')}}">x-modelable</a></li>
                 </ul>
             </li>
         </ul>

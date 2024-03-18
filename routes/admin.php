@@ -18,4 +18,5 @@ Route::get('/x-init', \App\Livewire\Admin\Alpinejs\XInit::class)->name('x-init')
 Route::get('/x-show', \App\Livewire\Admin\Alpinejs\XShow::class)->name('x-show');
 Route::get('/x-bind', \App\Livewire\Admin\Alpinejs\XBind::class)->name('x-bind');
 Route::get('/x-model', \App\Livewire\Admin\Alpinejs\XModel::class)->name('x-model');
+Route::get('/x-modelable', \App\Livewire\Admin\Alpinejs\XModelable::class)->name('x-modelable');
 
