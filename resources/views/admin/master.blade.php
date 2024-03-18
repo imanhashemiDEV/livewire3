@@ -18,6 +18,11 @@
           type="text/css">
     <link rel="stylesheet" href="{{url('panel/plugins/dropzone/css/dropzone.css')}}" type="text/css">
     <link rel="stylesheet" href="{{url('panel/plugins/persian_date_picker/persian-datepicker.min.css')}}"/>
+    <style>
+        .redBox{
+            background-color: red;
+        }
+    </style>
     @livewireStyles
 </head>
 <body class="small-navigation">

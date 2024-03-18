@@ -16,4 +16,5 @@ Route::get('/x-data/x-text/x-html', \App\Livewire\Admin\Alpinejs\XData::class)->
 Route::get('/x-on', \App\Livewire\Admin\Alpinejs\XOn::class)->name('x-on');
 Route::get('/x-init', \App\Livewire\Admin\Alpinejs\XInit::class)->name('x-init');
 Route::get('/x-show', \App\Livewire\Admin\Alpinejs\XShow::class)->name('x-show');
+Route::get('/x-bind', \App\Livewire\Admin\Alpinejs\XBind::class)->name('x-bind');
 
