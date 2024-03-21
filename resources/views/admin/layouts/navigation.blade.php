@@ -49,19 +49,29 @@
             </li>
             <li>
                 <a href="#">آلپاین جی اس</a>
-                <ul>
-                    <li><a href="{{route('alpinejs')}}">install</a></li>
-                    <li><a href="{{route('x-data')}}">x-data/x-text</a></li>
-                    <li><a href="{{route('x-on')}}">x-on</a></li>
-                    <li><a href="{{route('x-init')}}">x-init</a></li>
-                    <li><a href="{{route('x-show')}}">x-show</a></li>
-                    <li><a href="{{route('x-bind')}}">x-bind</a></li>
-                    <li><a href="{{route('x-model')}}">x-model</a></li>
-                    <li><a href="{{route('x-modelable')}}">x-modelable</a></li>
-                    <li><a href="{{route('x-transition')}}">x-transition</a></li>
-                    <li><a href="{{route('x-for')}}">x-for</a></li>
-                    <li><a href="{{route('x-if')}}">x-if</a></li>
-                    <li><a href="{{route('x-effect')}}">x-effect</a></li>
+                <ul style="display: none;">
+                    <li><a href="#">مقدمات </a>
+                        <ul style="display: none;">
+                            <li><a href="{{route('alpinejs')}}">install</a></li>
+                            <li><a href="{{route('x-data')}}">x-data/x-text</a></li>
+                            <li><a href="{{route('x-on')}}">x-on</a></li>
+                            <li><a href="{{route('x-init')}}">x-init</a></li>
+                            <li><a href="{{route('x-show')}}">x-show</a></li>
+                            <li><a href="{{route('x-bind')}}">x-bind</a></li>
+                            <li><a href="{{route('x-model')}}">x-model</a></li>
+                            <li><a href="{{route('x-modelable')}}">x-modelable</a></li>
+                            <li><a href="{{route('x-transition')}}">x-transition</a></li>
+                            <li><a href="{{route('x-for')}}">x-for</a></li>
+                            <li><a href="{{route('x-if')}}">x-if</a></li>
+                            <li><a href="{{route('x-effect')}}">x-effect</a></li>
+                            <li><a href="{{route('x-cloak')}}">x-cloak</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">متد جادویی </a>
+                        <ul style="display: none;">
+                            <li><a href="#">سطح منو </a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
         </ul>
