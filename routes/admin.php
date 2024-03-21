@@ -23,4 +23,5 @@ Route::get('/x-transition', \App\Livewire\Admin\Alpinejs\XTransition::class)->na
 Route::get('/x-for', \App\Livewire\Admin\Alpinejs\XFor::class)->name('x-for');
 Route::get('/x-if', \App\Livewire\Admin\Alpinejs\XIf::class)->name('x-if');
 Route::get('/x-effect', \App\Livewire\Admin\Alpinejs\XEffect::class)->name('x-effect');
+Route::get('/x-cloak', \App\Livewire\Admin\Alpinejs\XCloak::class)->name('x-cloak');
 
