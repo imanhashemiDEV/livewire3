@@ -21,4 +21,6 @@ Route::get('/x-model', \App\Livewire\Admin\Alpinejs\XModel::class)->name('x-mode
 Route::get('/x-modelable', \App\Livewire\Admin\Alpinejs\XModelable::class)->name('x-modelable');
 Route::get('/x-transition', \App\Livewire\Admin\Alpinejs\XTransition::class)->name('x-transition');
 Route::get('/x-for', \App\Livewire\Admin\Alpinejs\XFor::class)->name('x-for');
+Route::get('/x-if', \App\Livewire\Admin\Alpinejs\XIf::class)->name('x-if');
+Route::get('/x-effect', \App\Livewire\Admin\Alpinejs\XEffect::class)->name('x-effect');
 

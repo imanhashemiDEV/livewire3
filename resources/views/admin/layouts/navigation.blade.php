@@ -60,6 +60,8 @@
                     <li><a href="{{route('x-modelable')}}">x-modelable</a></li>
                     <li><a href="{{route('x-transition')}}">x-transition</a></li>
                     <li><a href="{{route('x-for')}}">x-for</a></li>
+                    <li><a href="{{route('x-if')}}">x-if</a></li>
+                    <li><a href="{{route('x-effect')}}">x-effect</a></li>
                 </ul>
             </li>
         </ul>
