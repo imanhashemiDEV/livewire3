@@ -26,6 +26,7 @@
                 <a href="#">کاربران</a>
                 <ul>
                     <li><a href="{{route('users')}}">لیست کاربران</a></li>
+                    <li><a href="{{route('checkbox_users')}}">لیست چک باکس</a></li>
                 </ul>
             </li>
             <li>
