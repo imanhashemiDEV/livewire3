@@ -51,7 +51,7 @@
             <li>
                 <a href="#">آلپاین جی اس</a>
                 <ul style="display: none;">
-                    <li><a href="#">مقدمات </a>
+                    <li><a href="#">دایرکتیوها </a>
                         <ul style="display: none;">
                             <li><a href="{{route('alpinejs')}}">install</a></li>
                             <li><a href="{{route('x-data')}}">x-data/x-text</a></li>
@@ -68,11 +68,11 @@
                             <li><a href="{{route('x-cloak')}}">x-cloak</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">متد جادویی </a>
-                        <ul style="display: none;">
-                            <li><a href="#">سطح منو </a></li>
-                        </ul>
-                    </li>
+{{--                    <li><a href="#">متد جادویی </a>--}}
+{{--                        <ul style="display: none;">--}}
+{{--                            <li><a href="#">سطح منو </a></li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
                 </ul>
             </li>
         </ul>
