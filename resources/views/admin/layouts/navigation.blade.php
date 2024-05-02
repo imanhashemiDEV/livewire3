@@ -43,6 +43,12 @@
                 </ul>
             </li>
             <li>
+                <a href="#">آگهی ها</a>
+                <ul>
+                    <li><a href="{{route('adv.divar')}}">ایجاد آگهی</a></li>
+                </ul>
+            </li>
+            <li>
                 <a href="#">تاریخ</a>
                 <ul>
                     <li><a href="{{route('date.picker')}}">انتخاب تاریخ</a></li>
