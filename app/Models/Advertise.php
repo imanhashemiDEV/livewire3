@@ -5,21 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Article extends Model
+class Advertise extends Model
 {
     use HasFactory;
 
     protected $fillable=[
-        'title',
-        'image',
-        'body',
-        'category_id'
+        'title'
     ];
-
-    public function category(): \Illuminate\Database\Eloquent\Relations\BelongsTo
-    {
-        return $this->belongsTo(Category::class);
-    }
 
     public function galleries(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
