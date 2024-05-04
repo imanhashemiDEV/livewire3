@@ -4,6 +4,7 @@ namespace App\Livewire\Admin\Category;
 
 use App\Models\Category;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -57,6 +58,8 @@ class Categories extends Component
         ]);
         $this->selectedCategoryIndex=null;
     }
+
+    #[On('refreshCategories')]
 
     #[Layout('admin.master')]
     public function render()
