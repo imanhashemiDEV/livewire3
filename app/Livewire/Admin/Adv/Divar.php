@@ -23,8 +23,10 @@ class Divar extends Component
         ]);
 
         foreach ($this->images as $image){
-            $name = time().'.'.$image->getClientOriginalExtension();
-            $image->storeAs('photos/adv',$name,'public');
+           // $name = time().'.'.$image->getClientOriginalExtension();
+             $result = $image->store('photos/adv','public');
+             $array = explode('/',$result);
+             $name = array_splice($array,-1)[0];
             Gallery::query()->create([
                 'advertise_id'=>$advertise->id,
                 'name'=>$name

@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e35b20141e261b337579a928af134398",
+    "content-hash": "077468f94e83904fb602e368ecf23f4e",
     "packages": [
+        {
+            "name": "alirahimi/livewire-persian-datepicker",
+            "version": "1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alirahimi818/livewire-persian-datepicker.git",
+                "reference": "40181d33c22a114e235b3ddddcc9735d2d393f7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alirahimi818/livewire-persian-datepicker/zipball/40181d33c22a114e235b3ddddcc9735d2d393f7c",
+                "reference": "40181d33c22a114e235b3ddddcc9735d2d393f7c",
+                "shasum": ""
+            },
+            "require": {
+                "livewire/livewire": ">=2.0",
+                "php": "^8.0.2"
+            },
+            "type": "component",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AliRahimi\\LivewirePersianDatepicker\\LivewirePersianDatepickerServiceProvider"
+                    ],
+                    "aliases": {
+                        "PersianDatepicker": "LivewirePersianDatepicker"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AliRahimi\\LivewirePersianDatepicker\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ali rahimi",
+                    "email": "alirahimi818@gmail.com"
+                }
+            ],
+            "description": "The Persian Datepicker component for Laravel Livewire",
+            "support": {
+                "issues": "https://github.com/alirahimi818/livewire-persian-datepicker/issues",
+                "source": "https://github.com/alirahimi818/livewire-persian-datepicker/tree/1.1.5"
+            },
+            "time": "2024-05-09T06:33:27+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.11.0",
@@ -8208,5 +8259,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
