@@ -23,7 +23,6 @@
             background-color: red;
         }
     </style>
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     @livewireStyles
 </head>
 <body class="small-navigation">
@@ -42,7 +41,6 @@
 <script src="{{url('panel/plugins/dropzone/js/dropzone.js')}}"></script>
 <script src="{{url('panel/plugins/persian_date_picker/persian-date.min.js')}}"></script>
 <script src="{{url('panel/plugins/persian_date_picker/persian-datepicker.min.js')}}"></script>
-<script src="{{ mix('js/app.js') }}" defer></script>
 @livewireScripts
 @stack('scripts')
 </body>

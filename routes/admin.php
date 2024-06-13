@@ -7,6 +7,7 @@ Route::get('/users', \App\Livewire\Admin\User\UserList::class)->name('users');
 Route::get('/checkbox_users', \App\Livewire\Admin\User\CheckboxUsers::class)->name('checkbox_users');
 Route::get('/categories', \App\Livewire\Admin\Category\Categories::class)->name('categories');
 Route::get('/articles', \App\Livewire\Admin\Article\Articles::class)->name('articles');
+Route::get('/videos', \App\Livewire\Admin\Videos\Videos::class)->name('videos');
 Route::get('/date_picker', \App\Livewire\Admin\DatePicker\DatePicker::class)->name('date.picker');
 Route::get('/create_article', \App\Livewire\Admin\Article\CreateArticle::class)->name('create.article');
 //Route::get('/edit_article/{article}', \App\Livewire\Admin\Article\EditArticle::class)->name('edit.article');
