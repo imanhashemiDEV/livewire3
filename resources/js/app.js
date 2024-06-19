@@ -1,4 +1,5 @@
 import './bootstrap';
+import './livewire-datepicker-datepicker.js'
 
 import Alpine from 'alpinejs';
 

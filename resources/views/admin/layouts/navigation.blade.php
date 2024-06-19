@@ -55,6 +55,12 @@
                 </ul>
             </li>
             <li>
+                <a href="#">ویدئو</a>
+                <ul>
+                    <li><a href="{{route('videos')}}">ذخیره ویدئو</a></li>
+                </ul>
+            </li>
+            <li>
                 <a href="#">آلپاین جی اس</a>
                 <ul style="display: none;">
                     <li><a href="#">دایرکتیوها </a>

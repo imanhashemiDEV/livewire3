@@ -4,6 +4,7 @@ namespace App\Livewire\Admin\Category;
 
 use App\Models\Category;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -42,6 +43,22 @@ class Categories extends Component
         $this->dispatch('closeCategoryModal');
     }
 
+    public function editRow($category_id)
+    {
+        $this->selectedCategoryIndex=$category_id;
+        $this->title = Category::query()->find($category_id)->title;
+    }
+
+    public function updateRow($category_id)
+    {
+        Category::query()->find($category_id)->update([
+            'title'=>$this->title
+        ]);
+        $this->selectedCategoryIndex=null;
+    }
+
+    #[On('refreshCategories')]
+  
     #[Layout('admin.master')]
     public function render()
     {

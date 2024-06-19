@@ -19,6 +19,9 @@
                         {{$multi}}
                 @endforeach
             </div>
+            <div>
+                <button class="btn btn-success" wire:click="CheckAll">checkAll in page {{$pageNumber}}</button>
+            </div>
             <div class="table overflow-auto" tabindex="8">
                  @foreach($selectedUsers as $selected)
                         {{$selected}}
@@ -41,7 +44,8 @@
                         @foreach($this->users as $index=>$user)
                             <tr>
                                 <td class="text-center align-middle" >
-                                    <input type="checkbox" value="{{$user->id}}" wire:model.live="selectedUsers">
+                                    <input type="checkbox" value="{{$user->id}}"
+                                           wire:model.live="selectedUsers">
                                 </td>
                                 <td class="text-center align-middle">{{$this->users->firstItem()+$index}}</td>
                                 <td class="text-center align-middle">

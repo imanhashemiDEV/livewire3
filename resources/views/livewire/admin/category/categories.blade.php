@@ -45,6 +45,7 @@
                         <tr>
                             <th class="text-center align-middle text-primary">ردیف</th>
                             <th class="text-center align-middle text-primary"> عنوان</th>
+                            <th class="text-center align-middle text-primary">ویرایش در کامپوننت</th>
                             <th class="text-center align-middle text-primary">ویرایش</th>
                             <th class="text-center align-middle text-primary">حذف</th>
                             <th class="text-center align-middle text-primary">تاریخ ایجاد</th>
@@ -58,9 +59,28 @@
                                         {{$category->title}}
                                 </td>
                                 <td class="text-center align-middle">
-                                        <a class="btn btn-outline-info" href="#" data-toggle="modal" data-target="#modal-category-edit" wire:click="editCategory({{$category->id}})">
-                                            ویرایش
+                                        <a class="btn btn-outline-info" href="#" data-toggle="modal" data-target="#modal-category-edit2" wire:click="$dispatch('editCategory',{id: {{$category->id}} })">
+                                            ویرایش در کامپوننت دیگر
                                         </a>
+                                </td>
+                                <td class="text-center align-middle">
+
+                                    <a class="btn btn-outline-info" href="#" data-toggle="modal" data-target="#modal-category-edit" wire:click="editCategory({{$category->id}})">
+                                        ویرایش
+                                    </a>
+                                </td>
+                                <td class="text-center align-middle">
+                                    @if($selectedCategoryIndex==$category->id)
+                                        <a class="btn btn-outline-info" href="#" wire:click="updateRow({{$category->id}})">
+                                            ذخیره خطی
+                                        </a>
+                                    @else
+                                        <a class="btn btn-outline-info" href="#" wire:click="editRow({{$category->id}})">
+                                            ویرایش خطی
+                                        </a>
+                                    @endif
+
+
                                 </td>
                                 <td class="text-center align-middle">
                                         <a class="btn btn-outline-danger">
@@ -102,6 +122,8 @@
             </div>
         </div>
     </div>
+
+    <livewire:admin.category.edit-category-modal/>
 
 </main>
 
