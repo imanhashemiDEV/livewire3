@@ -47,7 +47,6 @@
                             <th class="text-center align-middle text-primary"> عنوان</th>
                             <th class="text-center align-middle text-primary">ویرایش در کامپوننت</th>
                             <th class="text-center align-middle text-primary">ویرایش</th>
-                            <th class="text-center align-middle text-primary">ویرایش خطی</th>
                             <th class="text-center align-middle text-primary">حذف</th>
                             <th class="text-center align-middle text-primary">تاریخ ایجاد</th>
                         </tr>
@@ -57,15 +56,7 @@
                             <tr>
                                 <td class="text-center align-middle">{{$categories->firstItem()+$index}}</td>
                                 <td class="text-center align-middle">
-                                    @if($selectedCategoryIndex===$category->id)
-                                        <input type="text" wire:model="title" class="form-control text-left" dir="rtl">
-                                        @error('title')
-                                        <span class="text-danger">{{ $message }}</span>
-                                        @enderror
-                                    @else
                                         {{$category->title}}
-                                    @endif
-
                                 </td>
                                 <td class="text-center align-middle">
                                         <a class="btn btn-outline-info" href="#" data-toggle="modal" data-target="#modal-category-edit2" wire:click="$dispatch('editCategory',{id: {{$category->id}} })">
@@ -73,6 +64,7 @@
                                         </a>
                                 </td>
                                 <td class="text-center align-middle">
+
                                     <a class="btn btn-outline-info" href="#" data-toggle="modal" data-target="#modal-category-edit" wire:click="editCategory({{$category->id}})">
                                         ویرایش
                                     </a>

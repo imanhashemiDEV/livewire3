@@ -19,8 +19,6 @@ class Categories extends Component
     public $selected_category;
     public $category_title;
 
-    public $selectedCategoryIndex=null;
-
     public function createCategory()
     {
         $this->validate();
@@ -60,7 +58,7 @@ class Categories extends Component
     }
 
     #[On('refreshCategories')]
-
+  
     #[Layout('admin.master')]
     public function render()
     {
